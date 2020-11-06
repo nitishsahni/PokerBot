@@ -1,4 +1,3 @@
-
 class Table:
 
     def __init__(self, big_blind, small_blind, players=2):

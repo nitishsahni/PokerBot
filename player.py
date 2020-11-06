@@ -1,4 +1,3 @@
-
 class Player:
 
     """ The object that'll play the game. Each player can have a different strategy"""
