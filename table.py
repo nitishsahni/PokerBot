@@ -4,6 +4,9 @@ class Table:
         self.pot = big_blind + small_blind
         self.players = players
         self.to_call = 0
+        self.flop = None
+        self.turn = None
+        self.river = None
         self.still_in_game = [1] * players
 
     def update(self):
