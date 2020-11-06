@@ -12,7 +12,7 @@ class Player:
         self.small_blind = small_blind
 
     def get_table(self):
-        self.table.update()
+        self.cards = self.table.update()
         return self.table
 
     def check(self):

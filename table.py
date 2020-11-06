@@ -8,4 +8,5 @@ class Table:
         self.still_in_game = [1] * players
 
     def update(self):
-        return "changed pot, number of players in total, to_call for my player, and the players who haven't folded."
+        """changed pot, number of players in total, to_call for my player, and the players who haven't folded."""
+        return "players cards"
