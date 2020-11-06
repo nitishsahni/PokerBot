@@ -1,4 +1,4 @@
-# PokerBot
+# Hold'em Bot
 
 - The ultimate poker bot. Automates everything from creating an account to winning.
 
