@@ -8,5 +8,5 @@
 
 - Built using selenium and python.
 
-- In the process of building out the strategies (game tree).
+- In the process of building out the strategies (game trees).
 
