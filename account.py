@@ -93,6 +93,7 @@ def login(username, password, driver):
 
 
 class Generator:
+    """Generate poker accounts to play with indefinitely"""
 
     def __init__(self):
         password = get_password()
