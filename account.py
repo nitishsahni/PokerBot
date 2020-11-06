@@ -21,7 +21,7 @@ def get_number_accounts():
     num = input("Number of accounts needed: ")
     if not num:
         return 1
-    return num
+    return int(num)
 
 
 def get_email():
