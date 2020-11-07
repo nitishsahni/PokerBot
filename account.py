@@ -35,11 +35,12 @@ def get_email():
 
 
 def get_username(chars=string.ascii_letters + string.digits, length=8):
-    return ''.join([choice(chars) for i in range(length)])
+    username = ''.join([choice(chars) for i in range(length)])
+    print(username)
+    return username
 
 
-def create_account_and_login(email, username, password, num):
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+def create_account_and_login(email, username, password, num, driver):
     driver.get("https://poker.pokerstars.in")
     create_account(email, username, password, driver, num)
     login(username, password, driver)
@@ -67,7 +68,7 @@ def create_account(email, username, password, driver, num):
         action.click()
         action.perform()
         submit_button = driver.find_element_by_xpath("//button[@class='btn btn-success btn-big btn-full-width']")
-        time.sleep(3)
+        time.sleep(1)
         submit_button.click()
         time.sleep(3)
         close_button = driver.find_element_by_xpath("//button[@class='btn previous']")
@@ -88,20 +89,19 @@ def login(username, password, driver):
     pwd_input.send_keys(password)
     time.sleep(1)
     pwd_input.submit()
-    time.sleep(10)
-    driver.quit()
+    time.sleep(5)
 
 
 class Generator:
     """Generate poker accounts to play with indefinitely"""
 
-    def __init__(self):
+    def __init__(self, driver):
         password = get_password()
         number_of_accounts = get_number_accounts()
         email = get_email()
         username = get_username()
-        create_account_and_login(email, username, password, number_of_accounts)
+        create_account_and_login(email, username, password, number_of_accounts, driver)
 
 
 if __name__ == '__main__':
-    Generator()
+    Generator(webdriver.Chrome(ChromeDriverManager().install()))
