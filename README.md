@@ -1,6 +1,6 @@
 # Hold'em Bot
 
-- The ultimate poker bot. Automates everything from creating an account to winning.
+- A poker bot. Automates everything from creating an account to playing.
 
 - Generalized design allows others to fork and implement their own strategies.
 
@@ -8,5 +8,5 @@
 
 - Built using selenium and python.
 
-- In the process of building out the strategies (game trees).
+- In the process of building out the strategies (game trees  -  probalistic GTO).
 
